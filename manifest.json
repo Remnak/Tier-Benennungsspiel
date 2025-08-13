@@ -1,7 +1,7 @@
 {
   "name": "Tier-Benennungsspiel",
   "short_name": "TierSpiel",
-  "start_url": "tier_benennungsspiel.html",
+  "start_url": "/Tier-benennungsspiel/",
   "display": "standalone",
   "background_color": "#cceeff",
   "theme_color": "#3399cc",
