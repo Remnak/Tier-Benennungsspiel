@@ -1,4 +1,3 @@
-
 const tiere = {
   leicht: [
     { datei: "Katze.jpg", name: "KATZE" },
@@ -6,31 +5,31 @@ const tiere = {
     { datei: "Fuchs.jpg", name: "FUCHS" },
     { datei: "Wolf.jpg", name: "WOLF" },
     { datei: "Schwan.jpg", name: "SCHWAN" },
-    { datei: "Hirsch.jpg", name: "HIRSCH" },
+    { datei: "Hirsch.jpg", name: "HIRSCH" }
   ],
   mittel: [
+    { datei: "Elefant.jpg", name: "ELEFANT" },
     { datei: "Giraffe.jpg", name: "GIRAFFE" },
     { datei: "Hirsch.jpg", name: "HIRSCH" },
     { datei: "Delfin.jpg", name: "DELFIN" },
-    { datei: "Zebra.jpg", name: "ZEBRA" },
+    { datei: "Zebra.jpg", name: "ZEBRA" }
   ],
   schwer: [
     { datei: "Erdmännchen.jpg", name: "ERDMÄNNCHEN" },
     { datei: "Eichhörnchen.jpg", name: "EICHHÖRNCHEN" },
     { datei: "Nashorn.jpg", name: "NASHORN" },
-    { datei: "Elefant.jpg", name: "ELEFANT" },
+    { datei: "Elefant.jpg", name: "ELEFANT" }
   ]
 };
 
-
-
 let aktuellesLevel = 0;
+let ausgewaehlteTiere = [];
 
 function startGame() {
   document.getElementById("startseite").style.display = "none";
   document.getElementById("spielbereich").style.display = "block";
   aktuellesLevel = 0;
-  erstelleLevel(tiere[aktuellesLevel]);
+  erstelleLevel(ausgewaehlteTiere[aktuellesLevel]);
 }
 
 function erstelleLevel(tier) {
@@ -96,7 +95,6 @@ function drop(ev) {
 
   const zielSlot = ev.target;
 
-  // Wenn bereits ein Buchstabe im Slot ist, gib ihn zurück in die Bank
   const vorhandenerBuchstabe = zielSlot.innerText.trim();
   if (vorhandenerBuchstabe !== "") {
     const zurückElement = Array.from(document.querySelectorAll(".buchstabe"))
@@ -106,18 +104,15 @@ function drop(ev) {
     }
   }
 
-  // Setze neuen Buchstaben in den Slot
   zielSlot.innerText = draggedElement.innerText;
   draggedElement.style.visibility = "hidden";
 
   checkWord();
 }
 
-
-
 function checkWord() {
   const slots = document.querySelectorAll('.buchstabe-slot');
-  const name = tiere[aktuellesLevel].name.toUpperCase();
+  const name = ausgewaehlteTiere[aktuellesLevel].name.toUpperCase();
 
   slots.forEach((slot, index) => {
     const buchstabe = slot.innerText.trim();
@@ -153,18 +148,16 @@ function naechstesLevel() {
   erstelleLevel(ausgewaehlteTiere[aktuellesLevel]);
 }
 
-
 function zeigeLevelAuswahl() {
   document.getElementById("startseite").style.display = "none";
   document.getElementById("levelauswahl").style.display = "block";
 }
 
-let ausgewaehlteTiere = [];
-
 function levelStarten(levelName) {
-  ausgewaehlteTiere = levelTiere[levelName];
+  ausgewaehlteTiere = tiere[levelName];
   aktuellesLevel = 0;
   document.getElementById("levelauswahl").style.display = "none";
   document.getElementById("spielbereich").style.display = "block";
   erstelleLevel(ausgewaehlteTiere[aktuellesLevel]);
 }
+
