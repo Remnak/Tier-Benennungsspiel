@@ -1,0 +1,107 @@
+
+/* Allgemeines Layout */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #e6f2e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Überschriften */
+h1, h2 {
+  color: #4d804d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  font-size: 1.2em;
+  background-color: #66b266;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #559955;
+}
+
+/* Tierbild */
+#tierbild {
+  max-height: 40vh;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+/* Wortfeld */
+#wortfeld {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.buchstabe-slot {
+  width: 50px;
+  height: 60px;
+  border: 2px dashed #999;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 60px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+/* Buchstabenbank */
+.buchstabenbank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.buchstabe {
+  width: 50px;
+  height: 60px;
+  background-color: #99ccff;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 8px;
+  cursor: grab;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Steuerung */
+.steuerung {
+  margin-top: 20px;
+}
+
+/* Levelauswahl */
+#levelauswahl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#levelauswahl button {
+  background-color: #cc9966;
+}
+
+/* Startseite */
+#startseite {
+  text-align: center;
+}
