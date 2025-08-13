@@ -1,25 +1,24 @@
 
 const tiere = {
   leicht: [
-    { datei: "katze.jpg", name: "KATZE" },
-    { datei: "hund.jpg", name: "HUND" },
-    { datei: "fuchs.jpg", name: "FUCHS" },
+    { datei: "Katze.jpg", name: "KATZE" },
+    { datei: "Hund.jpg", name: "HUND" },
+    { datei: "Fuchs.jpg", name: "FUCHS" },
     { datei: "Wolf.jpg", name: "WOLF" },
     { datei: "Schwan.jpg", name: "SCHWAN" },
     { datei: "Hirsch.jpg", name: "HIRSCH" },
   ],
   mittel: [
-    { datei: "elefant.jpg", name: "ELEFANT" },
-    { datei: "giraffe.jpg", name: "GIRAFFE" },
-    { datei: "hirsch.jpg", name: "HIRSCH" },
+    { datei: "Giraffe.jpg", name: "GIRAFFE" },
+    { datei: "Hirsch.jpg", name: "HIRSCH" },
     { datei: "Delfin.jpg", name: "DELFIN" },
     { datei: "Zebra.jpg", name: "ZEBRA" },
   ],
   schwer: [
-    { datei: "erdmännchen.jpg", name: "ERDMÄNNCHEN" },
-    { datei: "eichhörnchen.jpg", name: "EICHHÖRNCHEN" },
-    { datei: "nashorn.jpg", name: "NASHORN" },
-    { datei: "elefant.jpg", name: "ELEFANT" },
+    { datei: "Erdmännchen.jpg", name: "ERDMÄNNCHEN" },
+    { datei: "Eichhörnchen.jpg", name: "EICHHÖRNCHEN" },
+    { datei: "Nashorn.jpg", name: "NASHORN" },
+    { datei: "Elefant.jpg", name: "ELEFANT" },
   ]
 };
 
